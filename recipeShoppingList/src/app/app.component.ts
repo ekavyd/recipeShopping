@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'recipeShoppingList';
+  currentPage: number = 0; 
+
+  constructor() { }
+
+  navChange(pageSelect){
+    console.log("page select " + pageSelect);
+    console.log("page type " + typeof(pageSelect));
+    this.currentPage = pageSelect;
+  }
+  
 }
