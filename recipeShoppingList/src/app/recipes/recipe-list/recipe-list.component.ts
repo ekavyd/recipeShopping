@@ -11,16 +11,16 @@ export class RecipeListComponent implements OnInit {
     new Recipe('A test recipe', 'this is a test', 'https://img.icons8.com/cotton/2x/circled-down--v2.png'),
     new Recipe('A SECOND recipe', 'just filling description space', 'https://cdn.pixabay.com/photo/2015/06/05/10/35/dishes-798316_1280.png')
   ];
-  @Output() recipeSelected = new EventEmitter();
+  @Output() recipeSelected = new EventEmitter<Recipe>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onRecipeSelect(data){
-    console.log("recipeLIST triggered --data ", data)
-    this.recipeSelected.emit(data);
+  onRecipeSelect(recipe: Recipe){
+    console.log("recipeLIST triggered --data ", recipe.name)
+    this.recipeSelected.emit(recipe);
   }
 
 }
