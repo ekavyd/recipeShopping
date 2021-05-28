@@ -19,12 +19,17 @@ export class ShoppingListService {
         this.ingredientsChanged.emit(this.ingredients.slice());
       }
 
-      removeIngredient(ingredient: Ingredient){
-        let index = this.ingredients.findIndex(x => x.name == ingredient.name);
-        this.ingredients = this.ingredients.slice(index, 1);
+      addIngredients(ingredients: Ingredient[]){
+        this.ingredients.push(...ingredients);
+        this.ingredientsChanged.emit(this.ingredients.slice());
       }
 
-      onClearIngredients(){
-        this.ingredients.length = 0;
-      }
+      // removeIngredient(ingredient: Ingredient){
+      //   let index = this.ingredients.findIndex(x => x.name == ingredient.name);
+      //   this.ingredients = this.ingredients.slice(index, 1);
+      // }
+
+      // onClearIngredients(){
+      //   this.ingredients.length = 0;
+      // }
 }

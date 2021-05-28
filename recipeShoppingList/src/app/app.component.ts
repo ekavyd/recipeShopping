@@ -10,11 +10,5 @@ export class AppComponent  {
   currentPage: number = 0; 
 
   constructor() { }
-
-  navChange(pageSelect){
-    console.log("page select " + pageSelect);
-    console.log("page type " + typeof(pageSelect));
-    this.currentPage = pageSelect;
-  }
   
 }
