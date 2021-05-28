@@ -5,7 +5,7 @@ import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component
 import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.component";
 import { RecipesComponent } from "./recipes/recipes.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
-import { ShoppingListService } from "./shopping-list/shopping-list.service";
+import { ShoppingListService } from "./shared/shopping-list.service";
 
 const appRoutes: Routes =[
     {path: '', redirectTo: '/recipes', pathMatch: 'full' },

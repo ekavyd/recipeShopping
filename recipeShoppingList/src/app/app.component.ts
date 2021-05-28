@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent  {
   title = 'recipeShoppingList';
-  currentPage: number = 0; 
 
   constructor() { }
   
